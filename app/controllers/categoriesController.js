@@ -28,7 +28,7 @@ module.exports.show = (req, res) => {
 
 module.exports.create = (req, res) => {
     const data = req.body
-
+    console.log(data)
     const category = new Category(data)
     category.save()
         .then((category) => {
