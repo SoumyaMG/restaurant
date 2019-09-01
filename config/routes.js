@@ -40,8 +40,8 @@ router.post('/orders', authenticateUser, orderController.create)
 router.put('/orders/:id', authenticateUser, orderController.update)
 router.delete('/orders/:id', authenticateUser, orderController.destroy)
 
-router.post('/users/register', authenticateUser, usersController.register)
-router.post('/users/login', authenticateUser, usersController.login)
+router.post('/users/register', usersController.register)
+router.post('/users/login', usersController.login)
 router.get('/users/account', authenticateUser, usersController.account)
 router.get('/users/logout', authenticateUser, usersController.logout)
 
